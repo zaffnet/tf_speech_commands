@@ -1,0 +1,7 @@
+python train.py --data_url= --data_dir=/home/zafar/speech_dataset/ --model_architecture=dconv --how_many_training_step=2000 --learning_rate=0.0001
+
+python inference.py --labels=/tmp/speech_commands_train/dconv_labels.txt --data_dir=/home/zafar/Desktop/tensorflow-speech-recognition-challenge/data/small_audio/ --output_file=output.txt --model_architecture=dconv --start_checkpoint=/tmp/speech_commands_train/dconv.ckpt-100  --batch_size=100
+
+python train_1d.py --data_url= --data_dir=/home/zafar/speech_dataset/ --how_many_training_step=500 --learning_rate=0.1 --summaries_dir=/home/zafar/Desktop/logs/adam0.1/
+
+python train_1d.py --data_url= --data_dir=/home/zafar/speech_dataset/ --how_many_training_step=2000 --batch_size=100 --learning_rate=0.01
